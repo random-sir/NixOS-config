@@ -175,6 +175,7 @@
     rustc
     rustfmt
     rust-analyzer
+    musikcube
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
