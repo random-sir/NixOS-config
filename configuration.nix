@@ -58,12 +58,8 @@
       gnome-tour
       gedit
       gnome-console
-      cheese # webcam tool
-      gnome-terminal
       epiphany # web browser
-      geary # email reader
       evince # document viewer
-      totem # video player
     ])
     ++ (with pkgs.gnome; [
       gnome-music
@@ -72,6 +68,10 @@
       iagno # go game
       hitori # sudoku game
       atomix # puzzle game
+      cheese # webcam tool
+      gnome-terminal
+      geary # email reader
+      totem # video player
     ]);
 
   # Configure keymap in X11
@@ -172,8 +172,8 @@
     libtool
     gccgo14
     vscode.fhs
-    dconf-editor
-    gnome-tweaks
+    gnome.dconf-editor
+    gnome.gnome-tweaks
     wget
     curl
     rustup

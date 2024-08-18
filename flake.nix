@@ -2,8 +2,8 @@
   description = "My basic flake test for my NixOS config";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    nixpkgs_stable.url = "github:NixOS/nixpkgs/nixos-24.05";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
   };
 
   outputs =
