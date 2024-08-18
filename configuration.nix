@@ -4,7 +4,7 @@
 {
   config,
   pkgs,
-  inputs,
+  pkgs-stable,
   ...
 }:
 {
@@ -149,42 +149,47 @@
     flake = "/home/random-sir/nixos-config";
   };
 
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    neovim
-    wl-clipboard
-    gnomeExtensions.pop-shell
-    wezterm
-    emacs
-    alejandra
-    nixfmt-rfc-style
-    git
-    stow
-    ripgrep
-    fd
-    fira-code
-    fish
-    zoxide
-    discord
-    cmake
-    gnumake
-    libgcc
-    libtool
-    gccgo14
-    vscode.fhs
-    gnome.dconf-editor
-    gnome.gnome-tweaks
-    wget
-    curl
-    rustup
-    musikcube
-    zip
-    unzip
-    delta
-    thefuck
-    tldr
-    fzf
-  ];
+  environment.systemPackages =
+    (with pkgs; [
+      vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+      neovim
+      wl-clipboard
+      gnomeExtensions.pop-shell
+      # wezterm
+      emacs
+      alejandra
+      nixfmt-rfc-style
+      git
+      stow
+      ripgrep
+      fd
+      fira-code
+      fish
+      zoxide
+      discord
+      cmake
+      gnumake
+      libgcc
+      libtool
+      gccgo14
+      vscode.fhs
+      gnome.dconf-editor
+      gnome.gnome-tweaks
+      wget
+      curl
+      rustup
+      musikcube
+      zip
+      unzip
+      # delta
+      thefuck
+      tldr
+      fzf
+    ])
+    ++ (with pkgs-stable; [
+      wezterm
+      delta
+    ]);
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
