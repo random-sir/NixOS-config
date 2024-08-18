@@ -184,6 +184,7 @@
     thefuck
     tldr
     fzf
+    gdb
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
