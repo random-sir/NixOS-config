@@ -114,6 +114,7 @@
     extraGroups = [
       "networkmanager"
       "wheel"
+      "libvirtd"
     ];
     packages =
       (with pkgs; [
@@ -148,6 +149,9 @@
     enable = true;
     flake = "/home/random-sir/nixos-config";
   };
+
+  virtualisation.libvirtd.enable = true;
+  programs.virt-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
