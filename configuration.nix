@@ -186,7 +186,7 @@
     unzip
     delta
     thefuck
-    tldr
+    tealdeer
     fzf
     gdb
     gh
