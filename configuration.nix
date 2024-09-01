@@ -150,6 +150,8 @@
     flake = "/home/random-sir/nixos-config";
   };
 
+  programs.fish.enable = true;
+
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
@@ -167,7 +169,6 @@
     ripgrep
     fd
     fira-code
-    fish
     zoxide
     discord
     cmake
