@@ -150,7 +150,7 @@
     flake = "/home/random-sir/nixos-config";
   };
 
-  programs.fish.enable = true;
+  # programs.fish.enable = true;
 
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
