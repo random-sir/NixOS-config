@@ -4,6 +4,32 @@
   home.username = "random-sir";
   home.homeDirectory = "/home/random-sir";
 
+  programs.git = {
+    enable = true;
+    userName = "random-sir";
+    userEmail = "antoni.torres@outlook.com";
+    extraConfig = {
+      core = {
+        editor = "${pkgs.neovim}/bin/nvim";
+      };
+      init = {
+        defaultBranch = "main";
+      };
+      merge = {
+        conflictstyle = "diff3";
+      };
+      diff = {
+        colorMoved = "default";
+      };
+    };
+
+    delta.enable = true;
+    delta.options = {
+      navigate = true;
+      light = false;
+    };
+  };
+
   programs.fish = {
     enable = true;
 
@@ -14,6 +40,12 @@
     shellAbbrs = {
       #git commands
       gd = "git diff";
+
+      #nix commands
+      ns = "nh os switch";
+      nsu = "nh os switch -u";
+      nt = "nh os test";
+      ntu = "nh os test -u";
     };
 
     plugins = [

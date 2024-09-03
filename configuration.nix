@@ -122,6 +122,7 @@
       ])
       ++ (with pkgs.gnomeExtensions; [
         # Gnome extensions go here
+        pop-shell
         caffeine
         vertical-workspaces
         dash-to-dock
@@ -159,12 +160,11 @@
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     neovim
     wl-clipboard
-    gnomeExtensions.pop-shell
     wezterm
     emacs
     alejandra
     nixfmt-rfc-style
-    git
+    # git
     stow
     ripgrep
     fd
