@@ -15,6 +15,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-24.05";
+      # If you are not running an unstable channel of nixpkgs, select the corresponding branch of nixvim.
+      # url = "github:nix-community/nixvim/nixos-24.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
   };
 
   outputs =
@@ -25,7 +32,7 @@
       ...
     }@inputs:
     {
-      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.nixos = nixpkgs.lib.nixosSystem rec {
         system = "x86_64-linux";
         specialArgs = {
           inherit inputs;
@@ -43,6 +50,7 @@
             home-manager.users.random-sir = import ./home.nix;
 
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
+            home-manager.extraSpecialArgs = specialArgs;
           }
         ];
       };

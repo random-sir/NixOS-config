@@ -1,6 +1,20 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 
 {
+  imports = [ inputs.nixvim.homeManagerModules.nixvim ];
+
+  programs.nixvim = {
+    enable = true;
+
+    colorschemes.catppuccin.enable = true;
+    plugins.lualine.enable = true;
+  };
+
   home.username = "random-sir";
   home.homeDirectory = "/home/random-sir";
 
@@ -10,7 +24,7 @@
     userEmail = "antoni.torres@outlook.com";
     extraConfig = {
       core = {
-        editor = "${pkgs.neovim}/bin/nvim";
+        editor = "nvim";
       };
       init = {
         defaultBranch = "main";
