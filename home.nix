@@ -11,8 +11,16 @@
   programs.nixvim = {
     enable = true;
 
+    opts = {
+      number = true;
+      relativenumber = true;
+    };
+
     colorschemes.catppuccin.enable = true;
-    plugins.lualine.enable = true;
+    plugins = {
+      lualine.enable = true;
+      diffview.enable = true;
+    };
   };
 
   home.username = "random-sir";
