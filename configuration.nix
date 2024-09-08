@@ -193,6 +193,7 @@
     gh
     bat
     bat-extras.batman
+    nurl
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
