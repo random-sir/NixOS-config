@@ -128,6 +128,7 @@
         dash-to-dock
         appindicator
         native-window-placement
+        lock-keys
       ]);
   };
 
