@@ -70,6 +70,11 @@
       ntu = "nh os test -u";
     };
 
+    functions = {
+      #Nix run shortcut which passes args to command run
+      nxr = "nix run nixpkgs#$argv[1] -- $argv[2..-1]";
+    };
+
     plugins = [
       {
         name = "puffer-fish";
