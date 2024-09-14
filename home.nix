@@ -52,12 +52,12 @@
     };
   };
 
+  programs.zoxide = {
+    enable = true;
+  };
+
   programs.fish = {
     enable = true;
-
-    interactiveShellInit = ''
-      zoxide init fish | source
-    '';
 
     shellAbbrs = {
       #git commands

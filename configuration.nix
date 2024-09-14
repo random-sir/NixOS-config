@@ -152,25 +152,20 @@
     flake = "/home/random-sir/nixos-config";
   };
 
-  # programs.fish.enable = true;
-
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    # neovim
     wl-clipboard
     wezterm
     emacs
     alejandra
     nixfmt-rfc-style
-    # git
     stow
     ripgrep
     fd
     fira-code
-    zoxide
     discord
     cmake
     gnumake
