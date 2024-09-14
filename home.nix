@@ -68,6 +68,9 @@
       nsu = "nh os switch -u";
       nt = "nh os test";
       ntu = "nh os test -u";
+
+      #emacs commands
+      e = "emacs -nw";
     };
 
     functions = {
