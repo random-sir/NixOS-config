@@ -56,6 +56,10 @@
     enable = true;
   };
 
+  programs.direnv = {
+    enable = true;
+  };
+
   programs.fish = {
     enable = true;
 
