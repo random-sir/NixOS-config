@@ -116,6 +116,8 @@
       "networkmanager"
       "wheel"
       "libvirtd"
+      #group to use arduino
+      "dialout"
     ];
     packages =
       (with pkgs; [
@@ -191,6 +193,9 @@
     bat
     bat-extras.batman
     nurl
+    arduino-ide
+    arduino-cli
+    arduino-language-server
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
