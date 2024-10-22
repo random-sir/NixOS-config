@@ -196,6 +196,8 @@
     arduino-ide
     arduino-cli
     arduino-language-server
+    arduino-core
+    simulide_1_1_0
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
