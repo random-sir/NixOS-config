@@ -198,6 +198,7 @@
     arduino-language-server
     arduino
     simulide_1_1_0
+    qbittorrent-qt5
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
