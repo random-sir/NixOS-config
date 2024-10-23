@@ -196,7 +196,7 @@
     arduino-ide
     arduino-cli
     arduino-language-server
-    arduino-core
+    arduino
     simulide_1_1_0
   ];
 
