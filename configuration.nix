@@ -211,6 +211,7 @@
     hunspellDicts.en_GB-large
     ghostwriter
     jetbrains.rust-rover
+    libreoffice-qt6-still
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
