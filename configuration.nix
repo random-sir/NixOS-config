@@ -210,6 +210,7 @@
     hunspellDicts.pt_BR
     hunspellDicts.en_GB-large
     ghostwriter
+    jetbrains.rust-rover
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
