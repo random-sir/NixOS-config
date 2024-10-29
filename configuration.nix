@@ -118,6 +118,8 @@
       "libvirtd"
       #group to use arduino
       "dialout"
+      #group to use virtualbox
+      "vboxusers"
     ];
     packages =
       (with pkgs; [
@@ -157,6 +159,8 @@
 
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.vmware.host.enable = true;
 
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
