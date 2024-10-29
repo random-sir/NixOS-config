@@ -205,6 +205,11 @@
     arduino
     simulide_1_1_0
     qbittorrent-qt5
+    hunspell
+    hunspellDicts.tok
+    hunspellDicts.pt_BR
+    hunspellDicts.en_GB-large
+    ghostwriter
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
