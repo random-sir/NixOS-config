@@ -212,6 +212,7 @@
     ghostwriter
     jetbrains.rust-rover
     libreoffice-qt6-still
+    gimp
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
