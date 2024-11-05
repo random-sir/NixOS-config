@@ -182,6 +182,7 @@
     libgcc
     libtool
     gccgo14
+    clang-tools
     vscode.fhs
     gnome.dconf-editor
     gnome.gnome-tweaks
