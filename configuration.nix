@@ -205,7 +205,7 @@
     arduino-language-server
     arduino
     simulide_1_1_0
-    qbittorrent-qt5
+    pkgs-unstable.qbittorrent
     hunspell
     hunspellDicts.tok
     hunspellDicts.pt_BR
