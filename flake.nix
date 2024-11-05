@@ -2,7 +2,7 @@
   description = "My basic flake test for my NixOS config";
 
   inputs = {
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
 
     #home-manager
@@ -34,6 +34,7 @@
       self,
       nixpkgs,
       home-manager,
+      nixpkgs-unstable,
       ...
     }@inputs:
     {
@@ -41,6 +42,15 @@
         system = "x86_64-linux";
         specialArgs = {
           inherit inputs;
+
+          pkgs-unstable = import nixpkgs-unstable {
+            # Refer to the `system` parameter from
+            # the outer scope recursively
+            inherit system;
+            # To use Chrome, we need to allow the
+            # installation of non-free software.
+            config.allowUnfree = true;
+          };
         };
         modules = [
           # Import the previous configuration.nix we used,
