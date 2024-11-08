@@ -208,10 +208,15 @@
     arduino
     simulide_1_1_0
     pkgs-unstable.qbittorrent
-    hunspell
-    hunspellDicts.tok
-    hunspellDicts.pt_BR
-    hunspellDicts.en_GB-large
+    (aspellWithDicts (
+      dicts: with dicts; [
+        de
+        en
+        en-computers
+        en-science
+        pt_BR
+      ]
+    ))
     ghostwriter
     jetbrains.rust-rover
     libreoffice-qt6-still
