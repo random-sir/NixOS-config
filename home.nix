@@ -66,6 +66,7 @@
     shellAbbrs = {
       #git commands
       gd = "git diff";
+      gp = "git commit -p";
 
       #nix commands
       ns = "nh os switch";
