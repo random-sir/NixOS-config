@@ -52,6 +52,10 @@
     };
   };
 
+  programs.bacon = {
+    enable = true;
+  };
+
   programs.zoxide = {
     enable = true;
   };
