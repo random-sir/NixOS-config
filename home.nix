@@ -8,21 +8,6 @@
 {
   imports = [ inputs.nixvim.homeManagerModules.nixvim ];
 
-  programs.nixvim = {
-    enable = true;
-
-    opts = {
-      number = true;
-      relativenumber = true;
-    };
-
-    colorschemes.catppuccin.enable = true;
-    plugins = {
-      lualine.enable = true;
-      diffview.enable = true;
-    };
-  };
-
   home.username = "random-sir";
   home.homeDirectory = "/home/random-sir";
 
@@ -49,6 +34,21 @@
     delta.options = {
       navigate = true;
       light = false;
+    };
+  };
+
+  programs.nixvim = {
+    enable = true;
+
+    opts = {
+      number = true;
+      relativenumber = true;
+    };
+
+    colorschemes.catppuccin.enable = true;
+    plugins = {
+      lualine.enable = true;
+      diffview.enable = true;
     };
   };
 
